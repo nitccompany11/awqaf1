@@ -90,9 +90,7 @@ class HomeController extends Controller
 
         $this->data['title'] = trans('home.thankYou');
 
-        $this->data['success'] = trans('home.subscribeSuccess');
-
-        return view('website.home.thankyou', $this->data);
+        return back()->with('success', trans('home.subscribeSuccess'));
     }
 
     public function page($id)
