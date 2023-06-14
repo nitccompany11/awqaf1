@@ -6,11 +6,11 @@
         {{ Breadcrumbs::render('mainbreda', $title, url()->current(), trans('admin.blogs'), substr(url()->current(), 0, -7)) }}
     @endsection
 
-  	{{-- <div class="alert alert-info text-center">
+  	<div class="alert alert-info text-center">
   		<p>
-  			Image Size 54px Width * 45px Height
+  			Image Size 530px Width * 370px Height
   		</p>
-  	</div> --}}
+  	</div>
 
 	<div class="col-md-12 text-center content-t card card">
 		<div class="form card-body pb-2">
