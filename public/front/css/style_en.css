@@ -1,0 +1,50 @@
+/* general  */
+body {
+	direction: ltr;
+}
+.custom-input h5 {
+	left: 28px;
+	right: auto;
+}
+
+/* nav  */
+/* Styles for mobile devices with a maximum width of 767 pixels */
+@media (max-width: 767px) {
+	nav .navbar-nav .dropdown-toggle::after {
+		right: 0;
+		left: auto;
+		transform: rotate(-90deg);
+	}
+}
+
+/* Styles for tablets with a minimum width of 768 pixels and maximum width of 1100 pixels */
+@media (min-width: 768px) and (max-width: 1100px) {
+	/* Styles for the normal view of the tablet */
+	@media (orientation: portrait) {
+		/* Add your styles for the normal view (portrait orientation) here */
+		nav .navbar-nav .dropdown-toggle::after {
+			right: 0;
+			left: auto;
+			transform: rotate(-90deg);
+		}
+	}
+}
+/* CEO's message  */
+.CEO-msg .CEO-name {
+	text-align: right;
+}
+
+/* latest News */
+.latestNews .item .date {
+	left: 29px;
+	right: auto;
+}
+
+/* footer  */
+/* Styles for tablets with a minimum width of 768 pixels and maximum width of 1023 pixels */
+@media (min-width: 768px) and (max-width: 1023px) {
+	footer .custom-input h5 {
+		left: 15px;
+		right: auto;
+	}
+}

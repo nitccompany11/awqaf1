@@ -1,0 +1,17 @@
+.tab_wrapper.right_side>ul {
+    width: 25%;
+    float: left;
+}
+
+.tab_wrapper.right_side>ul li.active {
+    text-align: left;
+}
+
+.btnBand {
+    float: left;
+    display: contents;
+}
+
+.btnBand i {
+    margin-left: 10px;
+}

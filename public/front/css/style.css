@@ -1,0 +1,1402 @@
+/* Start General Style  */
+:root {
+	--color-one: #285bb1;
+	--color-tow: #598c13;
+	--color-three: #142768;
+
+	--main-radius: 6px;
+	--main-transition: 0.3s;
+}
+
+body {
+	font-family: "Cairo", sans-serif !important;
+	direction: rtl;
+	overflow-x: hidden;
+}
+
+/* Start spinner style  */
+.my-spinner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	inset: 0;
+	background: #eee;
+	z-index: 999999;
+}
+
+.spinner-container {
+	width: 70px;
+	text-align: center;
+}
+
+.spinner-container > div {
+	width: 18px;
+	height: 18px;
+	background-color: #333;
+
+	border-radius: 100%;
+	display: inline-block;
+	-webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+	animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner-container .bounce1 {
+	-webkit-animation-delay: -0.32s;
+	animation-delay: -0.32s;
+}
+
+.spinner-container .bounce2 {
+	-webkit-animation-delay: -0.16s;
+	animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+	0%,
+	80%,
+	100% {
+		-webkit-transform: scale(0);
+	}
+
+	40% {
+		-webkit-transform: scale(1);
+	}
+}
+
+@keyframes sk-bouncedelay {
+	0%,
+	80%,
+	100% {
+		-webkit-transform: scale(0);
+		transform: scale(0);
+	}
+
+	40% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
+
+/* End spinner style  */
+a {
+	text-decoration: none !important;
+	/* Remove underline */
+	color: inherit !important;
+	/* Use the parent element's color */
+}
+
+.title {
+	color: var(--color-one);
+	font-weight: 800;
+	font-size: 46px;
+	text-align: center;
+}
+
+.title-group h5 {
+	color: var(--color-one);
+	font-size: 15px;
+	font-weight: 700;
+	margin-bottom: 23px;
+}
+
+.title-group h1 {
+	font-size: 46px;
+	font-weight: 700;
+}
+
+p {
+	line-height: 1.8;
+}
+
+.custom-date {
+	color: white;
+	background: #598c13;
+	font-size: 13px;
+	font-weight: 700;
+	right: 29px;
+	bottom: 6px;
+	padding: 6px 16px;
+	border-radius: 34px;
+}
+
+.custom-btn {
+	background-color: var(--color-one);
+	padding: 15px 40px !important;
+	font-weight: 700;
+	color: white;
+	border-radius: var(--main-radius);
+	outline: none;
+	border: none;
+	transition: all var(--main-transition) ease-in-out;
+	font-size: 16px;
+}
+
+.custom-btn:hover {
+	opacity: 0.75;
+}
+
+.custom-input {
+	margin-bottom: 33px;
+	height: 47px;
+	z-index: 20;
+}
+
+.message-input {
+	height: max-content;
+}
+
+.custom-input input,
+.message-input textarea {
+	font-size: 14px;
+	border: 1px solid #b2b2b2;
+	border-radius: var(--main-radius);
+	background-color: transparent;
+	caret-color: var(--color-three);
+	transition: all var(--main-transition) ease-in-out;
+}
+
+.custom-input:hover input,
+.custom-input:hover textarea {
+	border-color: var(--color-one);
+}
+
+.custom-input h5 {
+	top: 50%;
+	transform: translateY(-50%);
+	right: 28px;
+	font-size: 14px;
+	color: #9f9f9f;
+	font-weight: 700;
+	transition: all var(--main-transition) ease-in-out;
+	z-index: -1;
+}
+
+.message-input h5 {
+	top: 20px;
+	transform: unset;
+}
+
+.custom-input input:focus ~ h5,
+.custom-input input:valid ~ h5,
+.custom-input textarea:focus ~ h5,
+.custom-input textarea:valid ~ h5 {
+	color: var(--color-three);
+	top: 0;
+	background-color: white;
+	font-size: 10px;
+	z-index: 10;
+}
+
+.custom-input textarea:focus ~ h5,
+.custom-input textarea:valid ~ h5 {
+	top: -6px;
+}
+
+.page-info-bar {
+	padding: 37px 0px;
+	background-color: var(--color-one);
+	height: fit-content;
+}
+
+.page-info-bar h1 {
+	font-size: 26px;
+	color: white;
+	font-weight: 700;
+}
+
+.page-info-bar h4 {
+	font-size: 14px;
+	color: white;
+	font-weight: 300;
+	margin-top: 16px;
+}
+
+.content-with-title {
+	padding: 67px 0px;
+}
+
+.content-with-title .container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.content-with-title p {
+	color: #acacac;
+	font-weight: 700;
+	font-size: 18px;
+	width: 80%;
+	line-height: 2 !important;
+}
+
+.content-with-title .title-group h1 {
+	font-size: 35px;
+}
+
+.content-with-title .title-group h5 {
+	font-size: 15px;
+}
+
+.img-with-paragraph p {
+	font-size: 16px;
+	font-weight: 700;
+	color: #acacac;
+}
+
+.details-section p {
+	font-size: 12px;
+	font-weight: 700;
+	color: #a0a0a0;
+}
+
+.details-section .title h1 {
+	color: var(--color-one);
+	font-size: 21px;
+	font-weight: 700;
+}
+
+.details-section .related-items .title-group h1 {
+	font-size: 36px;
+}
+
+.details-section .related-items .item {
+	transition: all var(--main-transition) ease-in-out;
+}
+
+.details-section .related-items .item:hover {
+	transform: translateY(-10px);
+}
+
+/* Styles for mobile devices with a maximum width of 767 pixels */
+@media (max-width: 767px) {
+	.title-group h5 {
+		font-size: 11px;
+	}
+
+	.title-group h1 {
+		font-size: 28px;
+	}
+
+	.custom-btn {
+		padding: 11px 29px !important;
+	}
+
+	.custom-input {
+		margin-bottom: 15px;
+	}
+
+	.page-info-bar {
+		padding: 23px 0px;
+		background-color: var(--color-one);
+		height: fit-content;
+	}
+
+	.page-info-bar h1 {
+		font-size: 19px;
+	}
+
+	.page-info-bar h4 {
+		font-size: 9px;
+	}
+
+	.content-with-title p {
+		font-size: 15px;
+		width: 100%;
+	}
+
+	.content-with-title .title-group h1 {
+		font-size: 27px;
+	}
+
+	.content-with-title .title-group h5 {
+		font-size: 12px;
+	}
+}
+
+/* Styles for tablets with a minimum width of 768 pixels and maximum width of 1100 pixels */
+@media (min-width: 768px) and (max-width: 1100px) {
+	/* Styles for the normal view of the tablet */
+	@media (orientation: portrait) {
+		/* Add your styles for the normal view (portrait orientation) here */
+		.details-section .related-items .title-group h1 {
+			font-size: 29px;
+		}
+	}
+
+	/* Styles for the rotated view of the tablet */
+	@media (orientation: landscape) {
+		/* Add your styles for the rotated view (landscape orientation) here */
+		.details-section .image {
+			margin: auto !important;
+		}
+
+		.title-group h1 {
+			font-size: 36px;
+		}
+	}
+}
+
+/* End General Style  */
+
+/***********************
+------------------------------------- Home Page ----------------------------------
+***********************/
+
+/* Start nav style */
+.navbar {
+	background-color: white !important;
+	position: sticky !important;
+	top: 0;
+	width: 100%;
+	z-index: 100;
+}
+nav .dropdown button:hover,
+nav .dropdown button:focus {
+	background-color: transparent;
+}
+nav .navbar-nav .dropdown-toggle::after {
+	content: "\f078";
+	font-family: "Font Awesome 6 Free";
+	font-weight: 900;
+	border: 0;
+	font-size: 11px;
+	position: relative;
+	top: 1px;
+}
+
+nav .navbar-nav .dropdown-menu {
+	border: 0;
+	padding: 5px;
+	border-radius: 0;
+	border-bottom: 3px solid var(--color-one);
+}
+
+nav .navbar-nav .dropdown-menu .nav-link {
+	font-size: 14px;
+	border-radius: var(--main-radius);
+	color: black !important;
+}
+
+nav .navbar-nav .dropdown-menu .nav-link:hover {
+	background: transparent;
+	color: var(--color-one) !important;
+}
+@media (min-width: 992px) {
+	nav .navbar-nav .dropdown-menu {
+		top: 120%;
+		visibility: hidden;
+		pointer-events: none;
+		opacity: 0;
+		display: block;
+		margin: 0;
+	}
+
+	nav .navbar-nav .dropdown:not(.dropdown-submenu):hover > .dropdown-menu {
+		top: 100%;
+		pointer-events: all;
+		visibility: visible;
+		opacity: 1;
+		transition: all 0.25s ease-in-out;
+	}
+}
+
+.navbar-toggler,
+.navbar-toggler:focus {
+	box-shadow: none !important;
+	outline: none !important;
+	border: none !important;
+}
+
+.navbar .navbar-brand img {
+	width: 70%;
+	transition: all var(--main-transition) ease-in-out;
+}
+
+.navbar .navbar-nav {
+	width: max-content;
+}
+
+.navbar .nav-link {
+	font-size: 16px;
+	font-weight: 500;
+	transition: all var(--main-transition) ease-in-out;
+	color: black !important;
+}
+
+.navbar .nav-link:hover {
+	color: var(--color-one) !important;
+}
+
+.navbar .active {
+	background-color: var(--color-one) !important;
+	border-radius: 10pc;
+	color: white !important;
+	padding: 8px 25px !important;
+}
+
+.navbar .dropdown-menu .nav-link.active {
+	color: var(--color-one) !important;
+	background-color: transparent !important;
+	padding-left: var(--bs-navbar-nav-link-padding-x) !important;
+	padding-right: var(--bs-navbar-nav-link-padding-x) !important;
+}
+
+.navbar .active:hover {
+	color: white !important;
+	background-color: var(--color-tow);
+}
+
+.navbar .lang {
+	margin-inline-start: 20px;
+}
+
+.navbar .lang a {
+	background-color: var(--color-tow);
+	border-radius: 100%;
+	width: 40px;
+	height: 40px;
+	color: white !important;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-size: 17px;
+	font-weight: 700;
+}
+
+.navbar .lang a:hover {
+	background-color: var(--color-one);
+	color: white !important;
+}
+
+/* Styles for mobile devices with a maximum width of 767 pixels */
+@media (max-width: 767px) {
+	.navbar .navbar-brand img {
+		width: 55%;
+		margin-top: 0px !important;
+	}
+	.navbar .navbar-nav {
+		width: 100%;
+	}
+	.navbar .nav-link {
+		color: black !important;
+		padding-bottom: 20px !important;
+	}
+	.navbar .active {
+		background-color: transparent !important;
+		padding-inline-start: 0 !important;
+		border-radius: 0;
+		color: var(--color-one) !important;
+	}
+	.navbar .active:hover {
+		color: var(--color-one) !important;
+	}
+	.navbar .lang {
+		margin-inline-start: 0;
+		margin-top: 30px;
+	}
+	.navbar .lang a {
+		padding: 0 !important;
+	}
+	nav .navbar-nav .dropdown-toggle::after {
+		transition: all var(--main-transition) ease-in-out;
+		transform: rotate(90deg);
+		top: 11.5px !important;
+		left: 0;
+		position: absolute;
+	}
+	.navbar .dropdown .dropdown-item {
+		color: var(--color-one) !important;
+		padding: 10px;
+	}
+	nav .navbar-nav .dropdown-toggle.show::after {
+		transform: rotate(0) !important;
+	}
+	.offcanvas.show:not(.hiding),
+	.offcanvas.showing {
+		background-color: white !important;
+	}
+	.offcanvas-title {
+		color: black;
+	}
+	nav .navbar-nav .dropdown-menu {
+		border: 0;
+		padding: 5px 16px;
+		box-shadow: none !important;
+		background-color: transparent;
+	}
+}
+
+/* Styles for tablets with a minimum width of 768 pixels and maximum width of 1100 pixels */
+@media (min-width: 768px) and (max-width: 1100px) {
+	/* Styles for the normal view of the tablet */
+	@media (orientation: portrait) {
+		/* Add your styles for the normal view (portrait orientation) here */
+		.navbar .navbar-brand img {
+			width: 65%;
+			margin-top: 0px !important;
+		}
+		.navbar .nav-link {
+			color: black !important;
+			padding-bottom: 20px !important;
+		}
+		.navbar .navbar-nav {
+			width: 100%;
+		}
+		.navbar .active {
+			background-color: transparent !important;
+			padding-inline-start: 0 !important;
+			border-radius: 0;
+			color: var(--color-one) !important;
+		}
+		nav .navbar-nav .dropdown-toggle::after {
+			transition: all var(--main-transition) ease-in-out;
+			transform: rotate(90deg);
+			top: 11.5px !important;
+			left: 0;
+			position: absolute;
+		}
+		.navbar .active:hover {
+			color: var(--color-one) !important;
+		}
+		.navbar .dropdown-toggle {
+			width: 100%;
+			text-align: start;
+		}
+		.navbar .lang {
+			margin-inline-start: 0;
+			margin-top: 30px;
+		}
+		.navbar .lang a {
+			padding: 0 !important;
+		}
+		.navbar .dropdown .dropdown-item {
+			color: var(--color-one) !important;
+			padding: 10px;
+		}
+		nav .navbar-nav .dropdown-toggle::after {
+			transition: all var(--main-transition) ease-in-out;
+			transform: rotate(90deg);
+		}
+		nav .navbar-nav .dropdown-toggle.show::after {
+			transform: rotate(0) !important;
+		}
+		.offcanvas.show:not(.hiding),
+		.offcanvas.showing {
+			background-color: white !important;
+		}
+		.offcanvas-title {
+			color: black;
+		}
+		nav .navbar-nav .dropdown-menu {
+			border: 0;
+			padding: 5px 16px;
+			box-shadow: none !important;
+			background-color: transparent;
+		}
+	}
+
+	/* Styles for the rotated view of the tablet */
+	@media (orientation: landscape) {
+		/* Add your styles for the rotated view (landscape orientation) here */
+		.navbar .nav-link {
+			font-size: 12px !important;
+		}
+		.navbar .navbar-nav {
+			width: max-content;
+		}
+		.navbar .dropdown .dropdown-item {
+			color: var(--color-one) !important;
+			padding: 10px;
+		}
+	}
+}
+
+/* End nav style */
+
+/* Start intro style */
+.intro .intro-img {
+	width: 530px;
+}
+
+.intro h1 {
+	color: var(--color-one);
+	font-size: 32px;
+	font-weight: 700;
+}
+
+.intro p {
+	font-weight: 700;
+}
+
+.intro .intro-decoration {
+	display: inline-flex;
+}
+
+.intro .intro-decoration img {
+	height: 120px;
+	width: 50%;
+}
+
+/* Styles for mobile devices with a maximum width of 767 pixels */
+@media (max-width: 767px) {
+	.intro .intro-img {
+		width: 100%;
+	}
+
+	.intro h1 {
+		font-size: 32px;
+		text-align: center;
+	}
+
+	.intro p {
+		text-align: center;
+	}
+
+	.intro .intro-decoration img {
+		width: 100%;
+		height: unset;
+	}
+}
+
+/* Styles for tablets with a minimum width of 768 pixels and maximum width of 1023 pixels */
+@media (min-width: 768px) and (max-width: 1023px) {
+	.intro {
+		height: fit-content;
+	}
+
+	.intro .intro-decoration {
+		position: unset !important;
+	}
+
+	.intro .intro-decoration img {
+		height: unset;
+	}
+}
+
+/* End intro style */
+/* Start CEO's Message style*/
+.CEO-msg {
+	background: url("../images/CEO's\ Message\ section\ background.png");
+	background-blend-mode: luminosity;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.CEO-msg .container {
+	padding: 100px 0px;
+}
+
+.CEO-msg p {
+	font-weight: 700;
+}
+
+.CEO-msg .CEO-name {
+	text-align: left;
+	color: var(--color-one);
+	font-size: 20px;
+	font-weight: 600;
+}
+
+/* End CEO's Message style*/
+
+/* Start Our Work style*/
+.ourWork .project {
+	border-radius: var(--main-radius);
+	overflow: hidden;
+	position: relative;
+}
+
+.ourWork .project .overlay {
+	position: absolute;
+	background: rgba(255, 255, 255);
+	opacity: 0.5;
+	border-radius: var(--main-radius);
+	inset: 10%;
+	padding: 10px 23px;
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+	transition: all var(--main-transition) ease-in-out;
+}
+
+.ourWork .project:hover .overlay {
+	background: rgba(255, 255, 255);
+	opacity: 0.75;
+}
+
+.project-info h6 {
+	font-size: 11px;
+	font-weight: 400;
+	color: black;
+}
+
+.project-info h6 span {
+	color: var(--color-tow);
+	font-weight: 700;
+	margin-inline-start: 5px;
+}
+
+.project-info h4 {
+	font-size: 17px;
+	font-weight: 700;
+	color: black;
+}
+
+/* Styles for mobile devices with a maximum width of 767 pixels */
+@media (max-width: 767px) {
+	.ourWork .project {
+		margin-bottom: 20px;
+	}
+}
+
+/* Styles for tablets with a minimum width of 768 pixels and maximum width of 1023 pixels */
+@media (min-width: 768px) and (max-width: 1023px) {
+	.project-info h6 {
+		font-size: 10px;
+	}
+
+	.project-info h4 {
+		font-size: 14px;
+	}
+}
+
+/* End Our Work style*/
+/* Start latest News style  */
+.latestNews {
+	background: #8d8d8d31;
+	height: unset;
+}
+
+.latestNews .item {
+	transform: translateY(0);
+	transition: all var(--main-transition) ease-in-out;
+}
+
+.latestNews .item:hover {
+	transform: translateY(-10px);
+}
+
+.latestNews .item .item-info p {
+	font-weight: 700;
+	font-size: 12px;
+}
+
+.latestNews .item .item-info h4 {
+	text-decoration: none;
+	color: black;
+	font-size: 14px;
+	font-weight: 700;
+}
+
+/* Styles for mobile devices with a maximum width of 767 pixels */
+@media (max-width: 767px) {
+	.latestNews {
+		height: fit-content;
+	}
+
+	.latestNews .item {
+		margin-bottom: 20px;
+	}
+
+	.latestNews .custom-date {
+		font-size: 8px;
+		right: 8px;
+	}
+}
+
+/* Styles for tablets with a minimum width of 768 pixels and maximum width of 1100 pixels */
+@media (min-width: 768px) and (max-width: 1100px) {
+	/* Styles for the normal view of the tablet */
+	@media (orientation: portrait) {
+		/* Add your styles for the normal view (portrait orientation) here */
+		.latestNews .custom-date {
+			font-size: 8px;
+			right: 8px;
+		}
+	}
+
+	/* Styles for the rotated view of the tablet */
+	@media (orientation: landscape) {
+		/* Add your styles for the rotated view (landscape orientation) here */
+		.latestNews .custom-date {
+			font-size: 12px;
+			right: 10px;
+		}
+	}
+}
+
+/* End latest News style  */
+
+/* Start Contact Us style  */
+.contactUs .subtitle,
+.contactUs .title {
+	color: var(--color-three);
+	font-weight: 700;
+}
+
+/* End Contact Us style  */
+
+/* Start footer style  */
+footer {
+	height: unset;
+	background-color: var(--color-three);
+}
+
+footer h1 {
+	font-size: 24px;
+	font-weight: 700;
+	color: white;
+}
+
+footer p {
+	font-size: 15px;
+	color: white;
+}
+
+footer h5 {
+	font-size: 14px;
+	font-weight: 400;
+	color: white;
+}
+
+footer .custom-input input {
+	color: white;
+	caret-color: white;
+}
+
+footer .custom-input h5 {
+	color: white;
+	font-size: 12px;
+}
+
+footer .custom-btn {
+	background-color: white;
+	padding: 6px 24px !important;
+	color: var(--color-three);
+	font-size: 11px;
+	min-width: unset;
+}
+
+footer .custom-input input:focus ~ h5,
+footer .custom-input input:valid ~ h5 {
+	font-size: 9px;
+	background-color: var(--color-three);
+	color: white;
+}
+
+footer .social {
+	display: flex;
+	padding: 0;
+}
+
+footer .social li {
+	list-style: none;
+	font-size: 15px;
+	color: white;
+	width: 41px;
+	height: 41px;
+	border: 1px solid #ececec;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-inline-end: 15px;
+}
+
+footer .social li:hover i {
+	animation: headShake;
+	animation-duration: 1s;
+}
+
+footer .rights-reserved {
+	font-size: 12px;
+	font-weight: 400;
+}
+
+@media (max-width: 767px) {
+	footer .social {
+		margin: 30px auto;
+	}
+}
+
+/* Styles for tablets with a minimum width of 768 pixels and maximum width of 1023 pixels */
+@media (min-width: 768px) and (max-width: 1023px) {
+	footer h1 {
+		font-size: 20px;
+	}
+
+	footer p {
+		font-size: 11px;
+	}
+
+	footer h5 {
+		font-size: 8px;
+	}
+
+	footer .custom-input h5 {
+		color: white;
+		font-size: 10px;
+		right: 15px;
+	}
+}
+
+/* End footer style  */
+/* ------------------------------------------------------------------------------------------ */
+
+/***********************
+------------------------------------- vision Mission Objectives Page ----------------------------------
+***********************/
+.visionMissionObjectives .container {
+	padding: 150px 0px;
+}
+
+.visionMissionObjectives .header h1 {
+	font-size: 35px;
+	font-weight: 700;
+	color: var(--color-three);
+}
+
+.visionMissionObjectives p {
+	font-size: 16px;
+	font-weight: 700;
+	color: #6d6d6d;
+}
+
+.visionMissionObjectives .header img {
+	width: 40px;
+}
+
+/* Styles for mobile devices with a maximum width of 767 pixels */
+@media (max-width: 767px) {
+	.visionMissionObjectives .container {
+		padding: 100px 0px;
+	}
+
+	.visionMissionObjectives .header h1 {
+		font-size: 25px;
+	}
+
+	.visionMissionObjectives p {
+		font-size: 13px;
+	}
+}
+
+/* Styles for tablets with a minimum width of 768 pixels and maximum width of 1100 pixels */
+@media (min-width: 768px) and (max-width: 1100px) {
+	/* Styles for the normal view of the tablet */
+	@media (orientation: portrait) {
+		/* Add your styles for the normal view (portrait orientation) here */
+		.visionMissionObjectives p {
+			font-size: 17px;
+		}
+	}
+
+	/* Styles for the rotated view of the tablet */
+	@media (orientation: landscape) {
+		/* Add your styles for the rotated view (landscape orientation) here */
+		.visionMissionObjectives .header h1 {
+			font-size: 25px;
+		}
+
+		.visionMissionObjectives p {
+			font-size: 12px;
+		}
+	}
+}
+
+/* -------------------------------------------------------------------------------------- */
+
+/***********************
+------------------------------------- Subsidiary Companies page ----------------------------------
+***********************/
+.company-list .title-group h5 {
+	font-size: 16px !important;
+}
+
+.company-list .title-group h1 {
+	font-size: 24px !important;
+}
+
+/* Styles for mobile devices with a maximum width of 767 pixels */
+@media (max-width: 767px) {
+	.subCompanies .title-group {
+		margin-top: 0px !important;
+		margin-bottom: 37px !important;
+	}
+
+	.company-list .company-img {
+		margin-bottom: 0 !important;
+	}
+
+	.company-list .title-group h1 {
+		font-size: 15px !important;
+	}
+}
+
+/* Styles for tablets with a minimum width of 768 pixels and maximum width of 1100 pixels */
+@media (min-width: 768px) and (max-width: 1100px) {
+	/* Styles for the normal view of the tablet */
+	@media (orientation: portrait) {
+		/* Add your styles for the normal view (portrait orientation) here */
+		.title-group h1 {
+			font-size: 33px;
+		}
+
+		.title-group h5 {
+			font-size: 12px;
+			margin-bottom: 11px;
+		}
+
+		.company-list .title-group h1 {
+			font-size: 15px !important;
+		}
+
+		.company-list .title-group h5 {
+			font-size: 12px !important;
+		}
+
+		.company-list .company-img {
+			margin-bottom: 0 !important;
+			width: 69% !important;
+		}
+	}
+
+	/* Styles for the rotated view of the tablet */
+	@media (orientation: landscape) {
+		/* Add your styles for the rotated view (landscape orientation) here */
+	}
+}
+
+/* ------------------------------------------------------------------------------------ */
+
+/***********************
+------------------------------------ Noura for driving page ----------------------------------
+***********************/
+.nouraForDriving {
+	padding: 150px 0px !important;
+}
+
+.nouraForDriving .company-logo img {
+	width: 80%;
+}
+
+.nouraForDriving .company-detail h1 {
+	color: #6d6d6d;
+	font-weight: 700;
+	font-size: 42px;
+}
+
+.nouraForDriving .company-detail p {
+	font-size: 14px;
+	font-weight: 700;
+}
+
+.nouraForDriving .company-detail .custom-btn {
+	font-size: 15px;
+	padding: 15px 24px !important;
+	margin-top: 20px;
+}
+
+/* Styles for mobile devices with a maximum width of 767 pixels */
+@media (max-width: 767px) {
+	.nouraForDriving {
+		padding: 75px 0px !important;
+	}
+
+	.nouraForDriving .company-logo img {
+		width: 100%;
+	}
+
+	.nouraForDriving .company-detail h1 {
+		font-size: 30px;
+	}
+
+	.nouraForDriving .company-detail p {
+		font-size: 12px;
+	}
+
+	.nouraForDriving .company-detail .custom-btn {
+		font-size: 12px;
+		margin-top: 10px;
+	}
+}
+
+/* Styles for tablets with a minimum width of 768 pixels and maximum width of 1100 pixels */
+@media (min-width: 768px) and (max-width: 1100px) {
+	/* Styles for the normal view of the tablet */
+	@media (orientation: portrait) {
+		/* Add your styles for the normal view (portrait orientation) here */
+		.nouraForDriving {
+			padding: 75px 0px !important;
+		}
+
+		.nouraForDriving .company-logo img {
+			width: 100%;
+		}
+
+		.nouraForDriving .company-detail h1 {
+			font-size: 30px;
+		}
+
+		.nouraForDriving .company-detail p {
+			font-size: 12px;
+		}
+
+		.nouraForDriving .company-detail .custom-btn {
+			font-size: 12px;
+			margin-top: 10px;
+		}
+	}
+
+	/* Styles for the rotated view of the tablet */
+	@media (orientation: landscape) {
+		/* Add your styles for the rotated view (landscape orientation) here */
+		.nouraForDriving {
+			padding: 75px 0px !important;
+		}
+
+		.nouraForDriving .company-detail h1 {
+			font-size: 35px;
+		}
+
+		.nouraForDriving .company-detail p {
+			font-size: 12px;
+		}
+	}
+}
+
+/* --------------------------------------------------------------------------------------------- */
+
+/***********************
+------------------------------------- General Secretariat of the University page ----------------------------------
+***********************/
+
+.secretariatUniversity .img-with-paragraph h1 {
+	font-size: 28px;
+	color: #6d6d6d;
+}
+
+/* Styles for tablets with a minimum width of 768 pixels and maximum width of 1100 pixels */
+@media (min-width: 768px) and (max-width: 1100px) {
+	/* Styles for the normal view of the tablet */
+	@media (orientation: portrait) {
+		/* Add your styles for the normal view (portrait orientation) here */
+		.secretariatUniversity .img-with-paragraph h1 {
+			font-size: 17px;
+		}
+	}
+
+	/* Styles for the rotated view of the tablet */
+	@media (orientation: landscape) {
+		/* Add your styles for the rotated view (landscape orientation) here */
+		.secretariatUniversity .img-with-paragraph h1 {
+			font-size: 24px;
+		}
+	}
+}
+
+/* ------------------------------------------------------------------------------------------------------------ */
+
+/***********************
+------------------------------------- Board of company page ----------------------------------
+***********************/
+.boardOfCompany .board img {
+	border-radius: var(--main-radius);
+}
+
+.boardOfCompany .board p {
+	font-size: 12px;
+	font-weight: 400;
+	width: 100%;
+	line-height: 1.2;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	/* Limit to two lines */
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+/* ------------------------------------------------------------------------------------------------------------ */
+
+/***********************
+------------------------------------- Annual Reports page ----------------------------------
+***********************/
+.reports .report {
+	background: #ffffff;
+	box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.09);
+	border-radius: var(--main-radius);
+	padding: 25px 30px;
+	transition: all var(--main-transition) ease-in-out;
+}
+
+.reports .report:hover {
+	transform: translateY(-10px);
+}
+
+.reports .report h4 {
+	font-size: 18px;
+	font-weight: 700;
+}
+
+.reports .report h5 {
+	font-size: 14px;
+	font-weight: 400px;
+	color: #b1b1b1;
+}
+
+/* Styles for mobile devices with a maximum width of 767 pixels */
+@media (max-width: 767px) {
+	.reports .report {
+		padding: 25px 0px;
+	}
+}
+
+/* Styles for tablets with a minimum width of 768 pixels and maximum width of 1100 pixels */
+@media (min-width: 768px) and (max-width: 1100px) {
+	/* Styles for the normal view of the tablet */
+	@media (orientation: portrait) {
+		/* Add your styles for the normal view (portrait orientation) here */
+	}
+
+	/* Styles for the rotated view of the tablet */
+	@media (orientation: landscape) {
+		/* Add your styles for the rotated view (landscape orientation) here */
+		.reports .report h4 {
+			font-size: 16px;
+		}
+
+		.reports .report h5 {
+			font-size: 12px;
+		}
+	}
+}
+
+/* ------------------------------------------------------------------------------------------------------------ */
+
+/***********************
+------------------------------------- Contact page ----------------------------------
+***********************/
+.contact-section .phone,
+.contact-section .email {
+	direction: ltr;
+	font-size: 16px;
+	font-weight: 700;
+	color: #6d6d6d;
+	transition: all var(--main-transition) ease-in-out;
+}
+
+.contact-section .phone:hover,
+.contact-section .email:hover {
+	color: var(--color-tow);
+}
+
+.contact-section .custom-btn {
+	padding: 10px 40px !important;
+}
+
+/* Styles for mobile devices with a maximum width of 767 pixels */
+@media (max-width: 767px) {
+	.contact-section form {
+		width: 100% !important;
+	}
+}
+
+/* Styles for tablets with a minimum width of 768 pixels and maximum width of 1100 pixels */
+@media (min-width: 768px) and (max-width: 1100px) {
+	/* Styles for the normal view of the tablet */
+	@media (orientation: portrait) {
+		/* Add your styles for the normal view (portrait orientation) here */
+		.contact-section form {
+			width: 75% !important;
+		}
+	}
+
+	/* Styles for the rotated view of the tablet */
+	@media (orientation: landscape) {
+		/* Add your styles for the rotated view (landscape orientation) here */
+	}
+}
+
+/* ------------------------------------------------------------------------------------------------------------ */
+
+/***********************
+------------------------------------- Project page ----------------------------------
+***********************/
+.details-section .project-info h6 {
+	font-size: 13px !important;
+}
+
+.details-section .project-info h4 {
+	font-size: 21px !important;
+}
+
+.details-section .project-point {
+	background: #f8f8f8;
+	border-radius: var(--main-radius);
+}
+
+.details-section .project-point h5 {
+	font-size: 16px;
+}
+
+/* Styles for mobile devices with a maximum width of 767 pixels */
+@media (max-width: 767px) {
+}
+
+/* Styles for tablets with a minimum width of 768 pixels and maximum width of 1100 pixels */
+@media (min-width: 768px) and (max-width: 1100px) {
+	/* Styles for the normal view of the tablet */
+	@media (orientation: portrait) {
+		/* Add your styles for the normal view (portrait orientation) here */
+		.details-section .project-info h4 {
+			font-size: 17px !important;
+		}
+
+		.details-section .project-info h6 {
+			font-size: 12px !important;
+		}
+	}
+
+	/* Styles for the rotated view of the tablet */
+	@media (orientation: landscape) {
+		/* Add your styles for the rotated view (landscape orientation) here */
+	}
+}
+
+/* ------------------------------------------------------------------------------------------------------------ */
+
+/***********************
+------------------------------------- News Details page ----------------------------------
+***********************/
+.newsDetails p {
+	font-size: 15px;
+}
+
+/* Styles for mobile devices with a maximum width of 767 pixels */
+@media (max-width: 767px) {
+}
+
+/* Styles for tablets with a minimum width of 768 pixels and maximum width of 1100 pixels */
+@media (min-width: 768px) and (max-width: 1100px) {
+	/* Styles for the normal view of the tablet */
+	@media (orientation: portrait) {
+		/* Add your styles for the normal view (portrait orientation) here */
+		.newsDetails .item-info h5 {
+			font-size: 12px !important;
+		}
+	}
+
+	/* Styles for the rotated view of the tablet */
+	@media (orientation: landscape) {
+		/* Add your styles for the rotated view (landscape orientation) here */
+	}
+}
+
+/* ------------------------------------------------------------------------------------------------------------ */
+
+.custom-btn-btn {
+	color: #fff !important;
+}

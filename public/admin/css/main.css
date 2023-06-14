@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@500&display=swap');
+
+* {
+	font-family: 'El Messiri', sans-serif;
+}
+
+body {
+	font-family: 'El Messiri', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, li, ul, a, strong {
+	font-family: 'El Messiri', sans-serif;
+}
+
+.row-sm {
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
+.header-brand-img {
+	width: 85px;
+}
+
+.hidden {
+	display: none;
+}
+
+.pannelPermission {
+  padding: 0px;
+    flex: 0 0 23%;
+    max-width: 23%;
+    margin: 0 1%;
+    min-height: 280px;
+    margin-bottom: 20px;
+    border: 1px solid #bce8f1;
+}
+
+.pannelPermission .panel-heading {
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+}
+
+.pannelPermission .panel-body {
+    text-align: right;
+    padding: 10px 0px;
+}
+
+.pannelPermission .panel-body ul {
+  padding: 0px 10px;
+}
+
+.pannelPermission .panel-body ul li {
+    display: block;
+    padding: 5px;
+    border-bottom: 1px solid #cccccc82;
+ }
+
+.divider {
+	display: none;
+}
+
+.fixedHieght {
+	height: 120px;
+}
+
+.fixedHieght .card-body {
+	padding: 15px;
+}
+
+.fixedHieghtBox {
+	height: 70px;
+}
+
+.fixedHieghtBox .card-body {
+	padding: 10px;
+}
+
+.fixedHieghtChart {
+	height: 400px;
+}
+
+.page-title {
+	color: #063248;
+}
+
+.headCrumbText {
+	color: #333;
+	font-size: 14px;
+}
+
+.colorGreen {
+	color: green;
+}
+
+.fixedHeader250 {
+	min-height: 360px;
+}
+
+.moreHeadTxt {
+	position: absolute;
+  left: 20px;
+  color: #000;
+}
+
+@media screen and (max-width: 768px) {
+
+	.pannelPermission {
+		width: 100%;
+	}
+
+}
