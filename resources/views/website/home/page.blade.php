@@ -33,7 +33,7 @@
                     </p>
                 </div>
                 @if(!is_null($page->image))
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-6" style="padding: 20px;">
                     <img src="{{ $page->image }}" alt="{{ $title }}" class="w-100">
                 </div>
                 @endif

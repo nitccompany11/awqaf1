@@ -17,7 +17,7 @@
 	                  <th>{{ trans('admin.CEmail') }}</th>
 	                  <th>{{ trans('admin.phone') }}</th>
 	                  <th>{{ trans('admin.CMessage') }}</th>
-	                  {{-- <th>{{ trans('admin.options') }}</th> --}}
+	                  <th>{{ trans('admin.options') }}</th>
 	                </tr>
                 </thead>
                 <tbody>
@@ -29,9 +29,11 @@
 	                  	<td>{{ $s->email }}</td>
 	                  	<td>{{ $s->phone }}</td>
 	                  	<td>{{ $s->message }}</td>
-	                 	{{-- <td>
-	                  		<a href="{{ url('admin/contact') . '/' . $s->id . '/replay' }}" class="btn btn-success"><i class="fa fa-envelope-o"></i> {{ trans('admin.replay') }} </a>
-	                  	</td> --}}
+	                 	<td>
+	                  		{{-- <a href="{{ url('admin/contact') . '/' . $s->id . '/replay' }}" class="btn btn-success"><i class="fa fa-envelope-o"></i> {{ trans('admin.replay') }} </a> --}}
+
+	                  		<a href="{{ url('admin/contact') . '/' . $s->id . '/delete' }}" class="btn btn-danger delete"><i class="fa fa-close"></i> {{ trans('admin.delete') }} </a>
+	                  	</td>
 	              	</tr>
 	                @endforeach
 	                @else 

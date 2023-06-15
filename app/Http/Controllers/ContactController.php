@@ -82,4 +82,15 @@ class ContactController extends Controller
 
        return back()->with('success', trans('admin.sendMail'));
     }
+
+    public function delete($id)
+    {
+        $delete = Contact::findOrFail($id);
+
+        \LogActivity::addActivityLog('Delete Contact Have Name '. $delete->name .' From Admin ' . auth()->user()->name);
+
+        $delete->delete();
+
+        return back()->with('success', trans('admin.deleteSuccess'));
+    }
 }

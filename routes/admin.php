@@ -49,6 +49,7 @@
 		Route::post('permissionGroup/deleteAll', 'PermissionGroupController@deleteAll');
 
 		Route::get('contact', 'ContactController@index');
+		Route::get('contact/{id}/delete', 'ContactController@delete');
 		Route::get('contact/{id}/replay', 'ContactController@replay');
 		Route::post('contact/{id}/replay', 'ContactController@replaySend');
 
