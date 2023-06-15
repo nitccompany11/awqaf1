@@ -8,7 +8,7 @@
 
   	<div class="alert alert-info text-center">
   		<p>
-  			Image Size 190px Width * 165px Height
+  			Image Size 320px Width * 175px Height
   		</p>
   	</div>
 
