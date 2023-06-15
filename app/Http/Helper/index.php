@@ -14,7 +14,7 @@ use App\Models\Notifications;
 
     function getPages($pos)
 	{
-		return Pages::where('menu_place', $pos)->orderBy('id', 'asc')->get();
+		return Pages::where('menu_place', $pos)->orderBy('id', 'asc')->where('menu', 1)->get();
 	}
 
 	function checkPermission($groupID, $roleID) {
