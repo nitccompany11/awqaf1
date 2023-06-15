@@ -44,7 +44,7 @@ class UserController extends Controller
 
         $this->data['title'] = trans('admin.user');
 
-        $this->data['users'] = User::orderBy('id', 'desc')->where('admin', 1)->get();
+        $this->data['users'] = User::orderBy('id', 'desc')->where('admin', 1)->where('deleted_at', 0)->get();
 
         return view('admin.user.index', $this->data);
     }
@@ -66,7 +66,7 @@ class UserController extends Controller
 
         $this->data['title'] = trans('admin.adminT');
 
-        $this->data['users'] = User::orderBy('id', 'desc')->where('admin', 3)->get();
+        $this->data['users'] = User::orderBy('id', 'desc')->where('admin', 3)->where('deleted_at', 0)->get();
 
         return view('admin.user.admin', $this->data);
     }
@@ -153,7 +153,7 @@ class UserController extends Controller
 
         }
 
-        $this->data['user'] = User::findOrFail($id);
+        $this->data['user'] = User::where('deleted_at', 0)->findOrFail($id);
 
         if(session()->get('userType') == 'user') {
 
@@ -190,7 +190,7 @@ class UserController extends Controller
 
         ]);
 
-        $update = User::findOrFail($request->input('id'));
+        $update = User::where('deleted_at', 0)->findOrFail($request->input('id'));
 
         $update->name = $request->input('name');
         $update->email = $request->input('email');
@@ -243,7 +243,7 @@ class UserController extends Controller
 
         }
 
-        $this->data['user'] = User::findOrFail($id);
+        $this->data['user'] = User::where('deleted_at', 0)->findOrFail($id);
 
         if (!is_null($this->data['user']->name)) {
 
