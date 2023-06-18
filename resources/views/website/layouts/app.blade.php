@@ -222,6 +222,13 @@
                                 <i class="fa-brands fa-youtube"></i>
                             </li>
                         </a>
+                        @if(isset(getSetting()->twitter) && !is_null(getSetting()->twitter))
+                        <a href="{{ getSetting()->twitter }}">
+                            <li>
+                                <i class="fa-brands fa-twitter"></i>
+                            </li>
+                        </a>
+                        @endif
                     </ul>
                 </div>
                 <div class="col-12 col-md-3">

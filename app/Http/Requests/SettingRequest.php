@@ -42,6 +42,7 @@ class SettingRequest extends FormRequest
             'linkedin' => 'nullable|string|max:256',
             'instagram' => 'nullable|string|max:256',
             'youtube' => 'nullable|string|max:256',
+            'twitter' => 'nullable|string|max:191',
 
         ];
     }

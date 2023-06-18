@@ -146,6 +146,13 @@
 				</div> <!-- End Item -->
 
 				<div class="row row-sm"> <!-- Item -->
+					<label class="label label-control col-md-3"> {{ trans('admin.twitter') }} </label>
+					<div class="col-md-9">
+						<input type="text" name="twitter" class="form-control" placeholder="{{ trans('admin.twitter') }}" value="{{ $settings->twitter }}">
+					</div>
+				</div> <!-- End Item -->
+
+				<div class="row row-sm"> <!-- Item -->
 					<label class="label label-control col-md-3"> {{ trans('admin.map') }} </label>
 					<div class="col-md-9">
 						<input id="pac-input" class="controls" type="text" placeholder="Search">
