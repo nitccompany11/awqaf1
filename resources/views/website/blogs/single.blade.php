@@ -48,7 +48,7 @@
                                         <h6>
                                             {{ trans('admin.date') }}
                                             <span>
-                                                {{ $blog->created_at->format('Y-m-d') }}
+                                                {{ $related->created_at->format('Y-m-d') }}
                                             </span>
                                         </h6>
                                         <h4>
