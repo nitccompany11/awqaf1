@@ -28,6 +28,7 @@ class Setting extends Model
         'youtube',
         'lat',
         'lng',
+        'twitter',
     ];
 
     protected $hidden = [

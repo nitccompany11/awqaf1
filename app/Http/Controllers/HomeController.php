@@ -37,9 +37,9 @@ class HomeController extends Controller
 
     public function index()
     {
-        $this->data['projects'] = Projects::orderBy('id', 'desc')->get()->take(3);
+        $this->data['projects'] = Projects::where('status', 1)->orderBy('id', 'desc')->get()->take(3);
 
-        $this->data['blogs'] = Blogs::orderBy('id', 'desc')->get()->take(3);
+        $this->data['blogs'] = Blogs::where('status', 1)->orderBy('id', 'desc')->get()->take(3);
 
         $this->data['homePage'] = true;
 

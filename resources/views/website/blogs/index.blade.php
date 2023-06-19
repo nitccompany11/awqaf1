@@ -2,6 +2,19 @@
 
 @section('content')
 
+    <style type="text/css">
+
+        img.w-100 {
+            width: 100%;
+            height: 200px;
+        }
+
+        .custom-date {
+            bottom: -12px;
+        }
+
+    </style>
+
     @include('website.layouts.crumb')
 
     <section class="latestNews py-5">

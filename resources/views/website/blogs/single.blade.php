@@ -35,7 +35,7 @@
                 <div class="p-lg-5 related-items">
                     <div class="title-group w-100 mb-5">
                         <h1 class="text-start">
-                            {{ trans('home.relatedProjects') }}
+                            {{ trans('home.relatedBlogs') }}
                         </h1>
                     </div>
                     <div class="row">
@@ -43,12 +43,12 @@
                         <div class="col-12 col-md-4 px-md-4 aos-init" data-aos="fade-up" data-aos-delay="300">
                             <div class="item">
                                 <a href="{{ route('get.blog', [$related->id, $related->getUrlTitle()]) }}">
-                                    <img src="{{ $related->image }}" alt="" class="w-100">
+                                    <img src="{{ $related->image }}" alt="" class="w-100" style="height: 150px;">
                                     <div class="project-info mt-4 mb-5">
                                         <h6>
                                             {{ trans('admin.date') }}
                                             <span>
-                                                {{ $related->date_project }}
+                                                {{ $blog->created_at->format('Y-m-d') }}
                                             </span>
                                         </h6>
                                         <h4>

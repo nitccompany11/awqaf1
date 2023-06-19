@@ -326,7 +326,7 @@
     <script type="text/javascript">
         (function () {
             var options = {
-                    whatsapp: "{{ getSetting()->site_phone }}", // WhatsApp number
+                    whatsapp: "{{ getSetting()->site_phone2 }}", // WhatsApp number
                     call_to_action: "{{ trans('home.messageUs') }}", // Call to action
                     position: "left", // Position may be 'right' or 'left'
                 };

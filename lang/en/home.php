@@ -359,4 +359,5 @@ return [
     'importnantPoints' => 'Important Points',
     'by' => 'By',
     'copy' => 'Designed and programmed by White Arrow for Information Technology',
+    'relatedBlogs' => 'Related Blogs',
 ];
