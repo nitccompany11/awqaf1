@@ -115,8 +115,8 @@
                     <div class="item">
                         <a href="{{ route('get.blog', [$blog->id, $blog->getUrlTitle()]) }}">
                             <div class="position-relative">
-                                <img class="w-100" src="{{ $blog->image }}" alt="news">
-                                <h5 class="custom-date position-absolute">
+                                <img class="w-100" src="{{ $blog->image }}" alt="news" style="height: 200px;">
+                                <h5 class="custom-date position-absolute" style="bottom: -20px">
                                     {{ $blog->created_at->format('Y/m/d') }}
                                 </h5>
                             </div>
