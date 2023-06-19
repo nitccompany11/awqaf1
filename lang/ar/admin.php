@@ -550,7 +550,7 @@ return [
     'editPoint' => 'تعديل نقطه',
     'menu_place' => 'مكان الصفحه في القائمه',
     'image_place' => 'مكان الصوره في الصفحه',
-    'aboutCompany' => 'ةكرشلا نع',
+    'aboutCompany' => 'عن الشركة',
     'aboutAwqaf' => 'حول اوقاف',
     'afterText' => 'في المنتصف بعد النص',
     'nextToText' => 'بجانب النص',
