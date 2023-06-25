@@ -144,8 +144,8 @@
 
                                 </a>
                         </li>
-                        <li class="nav-item <?php if(isset($projectsPage) && $projectsPage == true): ?> active <?php endif; ?>">
-                            <a class="nav-link dropdown-item" aria-current="page" target="_self"
+                        <li class="nav-item">
+                            <a class="nav-link dropdown-item <?php if(isset($projectsPage) && $projectsPage == true): ?> active <?php endif; ?>" aria-current="page" target="_self"
                                 href="<?php echo e(route('get.projects')); ?>">
                                     <?php echo e(trans('admin.projects')); ?>
 
@@ -235,6 +235,13 @@
                                 <i class="fa-brands fa-youtube"></i>
                             </li>
                         </a>
+                        <?php if(isset(getSetting()->twitter) && !is_null(getSetting()->twitter)): ?>
+                        <a href="<?php echo e(getSetting()->twitter); ?>">
+                            <li>
+                                <i class="fa-brands fa-twitter"></i>
+                            </li>
+                        </a>
+                        <?php endif; ?>
                     </ul>
                 </div>
                 <div class="col-12 col-md-3">
@@ -331,7 +338,7 @@
     <script type="text/javascript">
         (function () {
             var options = {
-                    whatsapp: "<?php echo e(getSetting()->site_phone); ?>", // WhatsApp number
+                    whatsapp: "<?php echo e(getSetting()->site_phone2); ?>", // WhatsApp number
                     call_to_action: "<?php echo e(trans('home.messageUs')); ?>", // Call to action
                     position: "left", // Position may be 'right' or 'left'
                 };

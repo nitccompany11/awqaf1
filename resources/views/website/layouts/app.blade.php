@@ -138,8 +138,8 @@
                                     {{ strip_tags(getLayout('investment')['name_' . getLang()]) }}
                                 </a>
                         </li>
-                        <li class="nav-item @if(isset($projectsPage) && $projectsPage == true) active @endif">
-                            <a class="nav-link dropdown-item" aria-current="page" target="_self"
+                        <li class="nav-item">
+                            <a class="nav-link dropdown-item @if(isset($projectsPage) && $projectsPage == true) active @endif" aria-current="page" target="_self"
                                 href="{{ route('get.projects') }}">
                                     {{ trans('admin.projects') }}
                                 </a>

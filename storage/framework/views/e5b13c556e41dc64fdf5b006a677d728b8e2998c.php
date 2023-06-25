@@ -30,9 +30,10 @@
                                 </div>
                                 <div class="wrap-input100 validate-input input-group" id="Password-toggle">
                                     <a href="javascript:void(0)" class="input-group-text bg-white text-muted">
-                                        <i class="zmdi zmdi-eye text-muted" aria-hidden="true"></i>
+                                        
+                                        <i class="fa fa-eye" id="togglePassword"></i>
                                     </a>
-                                    <input class="input100 border-start-0 form-control ms-0" name="password" type="password" placeholder="<?php echo e(trans('admin.password')); ?>">
+                                    <input class="input100 border-start-0 form-control ms-0" id="id_password" name="password" type="password" placeholder="<?php echo e(trans('admin.password')); ?>">
                                 </div>
                                 <div class="container-login100-form-btn">
                                     <button class="login100-form-btn btn-primary" type="submit">
@@ -49,6 +50,23 @@
         </div>
     </div>
     <!-- CONTAINER CLOSED -->
+
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('script'); ?>
+
+    <script type="text/javascript">
+        const togglePassword = document.querySelector('#togglePassword');
+          const password = document.querySelector('#id_password');
+
+          togglePassword.addEventListener('click', function (e) {
+            // toggle the type attribute
+            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+            password.setAttribute('type', type);
+            // toggle the eye slash icon
+            this.classList.toggle('fa-eye-slash');
+        });
+    </script>
 
 <?php $__env->stopSection(); ?>
 

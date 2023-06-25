@@ -13,6 +13,15 @@
             bottom: -20px;
         }
 
+        @if(getLang() == 'ar')
+
+        .custom-date {
+            left: 29px;
+            right: initial;
+        }
+
+        @endif
+
     </style>
 
     @include('website.layouts.crumb')

@@ -127,8 +127,8 @@
                     <div class="item">
                         <a href="<?php echo e(route('get.blog', [$blog->id, $blog->getUrlTitle()])); ?>">
                             <div class="position-relative">
-                                <img class="w-100" src="<?php echo e($blog->image); ?>" alt="news">
-                                <h5 class="custom-date position-absolute">
+                                <img class="w-100" src="<?php echo e($blog->image); ?>" alt="news" style="height: 200px;">
+                                <h5 class="custom-date position-absolute" style="bottom: -20px">
                                     <?php echo e($blog->created_at->format('Y/m/d')); ?>
 
                                 </h5>
