@@ -198,8 +198,8 @@
                       </tr>
                     </thead>
                     <tbody>
-                       @if(count($latestCompanies) > 0)
-                      @foreach($latestCompanies as $s)
+                       @if(count($latestProjects) > 0)
+                      @foreach($latestProjects as $s)
                       <tr>
                           <td>{{ $s->id }}</td>
                           <td>{{ $s['name_' . getLang()] }}</td>

@@ -186,8 +186,8 @@
                       </tr>
                     </thead>
                     <tbody>
-                       <?php if(count($latestCompanies) > 0): ?>
-                      <?php $__currentLoopData = $latestCompanies; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $s): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                       <?php if(count($latestProjects) > 0): ?>
+                      <?php $__currentLoopData = $latestProjects; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $s): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                       <tr>
                           <td><?php echo e($s->id); ?></td>
                           <td><?php echo e($s['name_' . getLang()]); ?></td>
