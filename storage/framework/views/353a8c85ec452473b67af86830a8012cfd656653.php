@@ -146,6 +146,33 @@
 				</div> <!-- End Item -->
 
 				<div class="row row-sm"> <!-- Item -->
+					<label class="label label-control col-md-3"> <?php echo e(trans('admin.twitter')); ?> </label>
+					<div class="col-md-9">
+						<input type="text" name="twitter" class="form-control" placeholder="<?php echo e(trans('admin.twitter')); ?>" value="<?php echo e($settings->twitter); ?>">
+					</div>
+				</div> <!-- End Item -->
+
+				<div class="row row-sm"> <!-- Item -->
+					<label class="label label-control col-md-3"> <?php echo e(trans('admin.showProjectMenu')); ?> </label>
+					<div class="col-md-9">
+						<select name="showProjectMenu" class="form-control">
+							<option value="0" <?php if($settings->showProjectMenu == 0): ?> selected <?php endif; ?>><?php echo e(trans('admin.no')); ?></option>
+							<option value="1" <?php if($settings->showProjectMenu == 1): ?> selected <?php endif; ?>><?php echo e(trans('admin.yes')); ?></option>
+						</select>
+					</div>
+				</div> <!-- End Item -->
+
+				<div class="row row-sm"> <!-- Item -->
+					<label class="label label-control col-md-3"> <?php echo e(trans('admin.showReportsMenu')); ?> </label>
+					<div class="col-md-9">
+						<select name="showReportsMenu" class="form-control">
+							<option value="0" <?php if($settings->showReportsMenu == 0): ?> selected <?php endif; ?>><?php echo e(trans('admin.no')); ?></option>
+							<option value="1" <?php if($settings->showReportsMenu == 1): ?> selected <?php endif; ?>><?php echo e(trans('admin.yes')); ?></option>
+						</select>
+					</div>
+				</div> <!-- End Item -->
+
+				<div class="row row-sm"> <!-- Item -->
 					<label class="label label-control col-md-3"> <?php echo e(trans('admin.map')); ?> </label>
 					<div class="col-md-9">
 						<input id="pac-input" class="controls" type="text" placeholder="Search">

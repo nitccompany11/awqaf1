@@ -138,12 +138,14 @@
                                     {{ strip_tags(getLayout('investment')['name_' . getLang()]) }}
                                 </a>
                         </li>
+                        @if(getSetting()->showProjectMenu == 1)
                         <li class="nav-item">
                             <a class="nav-link dropdown-item @if(isset($projectsPage) && $projectsPage == true) active @endif" aria-current="page" target="_self"
                                 href="{{ route('get.projects') }}">
                                     {{ trans('admin.projects') }}
                                 </a>
                         </li>
+                        @endif
                         <li class="nav-item dropdown">
                             <a class="dropdown-toggle nav-link @if(isset($blogsPage) && $blogsPage == true) active @endif" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
@@ -156,12 +158,14 @@
                                             {{ trans('admin.blogs') }}
                                         </a>
                                 </li>
+                                @if(getSetting()->showReportsMenu == 1)
                                 <li>
                                     <a class="nav-link dropdown-item" aria-current="page" target="_self"
                                         href="{{ route('get.reports') }}">
                                             {{ trans('admin.reports') }}
                                         </a>
                                 </li>
+                                @endif
                             </ul>
                         </li>
                         <li class="nav-item">

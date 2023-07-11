@@ -556,5 +556,7 @@
         'countProjects' => 'Count Projects',
         'countBlogs' => 'Count Blogs',
         'changeLanguage' => 'Change Language',
+        'showReportsMenu' => 'Show Reports in Menu',
+        'showProjectMenu' => 'Show Projects in Menu',
 
     ];

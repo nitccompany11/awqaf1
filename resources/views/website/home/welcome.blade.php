@@ -2,6 +2,23 @@
 
 @section('style')
 
+    <style type="text/css">
+
+        .custom-date {
+            bottom: -20px;
+        }
+
+        @if(getLang() == 'ar')
+
+        .custom-date {
+            left: 29px;
+            right: initial;
+        }
+
+        @endif
+
+    </style>
+
 @endsection
 
 @section('content')

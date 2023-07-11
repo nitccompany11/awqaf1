@@ -1,5 +1,22 @@
 <?php $__env->startSection('style'); ?>
 
+    <style type="text/css">
+
+        .custom-date {
+            bottom: -20px;
+        }
+
+        <?php if(getLang() == 'ar'): ?>
+
+        .custom-date {
+            left: 29px;
+            right: initial;
+        }
+
+        <?php endif; ?>
+
+    </style>
+
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('content'); ?>

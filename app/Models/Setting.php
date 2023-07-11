@@ -29,6 +29,8 @@ class Setting extends Model
         'lat',
         'lng',
         'twitter',
+        'showReportsMenu',
+        'showProjectMenu',
     ];
 
     protected $hidden = [

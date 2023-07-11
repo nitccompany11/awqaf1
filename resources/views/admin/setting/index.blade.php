@@ -153,6 +153,26 @@
 				</div> <!-- End Item -->
 
 				<div class="row row-sm"> <!-- Item -->
+					<label class="label label-control col-md-3"> {{ trans('admin.showProjectMenu') }} </label>
+					<div class="col-md-9">
+						<select name="showProjectMenu" class="form-control">
+							<option value="0" @if($settings->showProjectMenu == 0) selected @endif>{{ trans('admin.no') }}</option>
+							<option value="1" @if($settings->showProjectMenu == 1) selected @endif>{{ trans('admin.yes') }}</option>
+						</select>
+					</div>
+				</div> <!-- End Item -->
+
+				<div class="row row-sm"> <!-- Item -->
+					<label class="label label-control col-md-3"> {{ trans('admin.showReportsMenu') }} </label>
+					<div class="col-md-9">
+						<select name="showReportsMenu" class="form-control">
+							<option value="0" @if($settings->showReportsMenu == 0) selected @endif>{{ trans('admin.no') }}</option>
+							<option value="1" @if($settings->showReportsMenu == 1) selected @endif>{{ trans('admin.yes') }}</option>
+						</select>
+					</div>
+				</div> <!-- End Item -->
+
+				<div class="row row-sm"> <!-- Item -->
 					<label class="label label-control col-md-3"> {{ trans('admin.map') }} </label>
 					<div class="col-md-9">
 						<input id="pac-input" class="controls" type="text" placeholder="Search">

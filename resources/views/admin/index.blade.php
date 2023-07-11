@@ -116,8 +116,8 @@
                       </tr>
                     </thead>
                     <tbody>
-                       @if(count($latestProjects) > 0)
-                      @foreach($latestProjects as $s)
+                       @if(count($latestBlogs) > 0)
+                      @foreach($latestBlogs as $s)
                       <tr>
                           <td>{{ $s->id }}</td>
                           <td>{{ $s['name_' . getLang()] }}</td>

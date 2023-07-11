@@ -6,7 +6,7 @@
 
 	<section class="py-5">
         <div class="container">
-            <div class="row h-100 d-flex justify-content-center align-items-center @if($page->image_place == 1) flex-column @endif">
+            <div class="row h-100 d-flex justify-content-center @if($page->image_place == 1) align-items-center flex-column @endif">
                 @if($page->image_place == 1)
                 <div>
                     <h1 class="text-black title fs-2 fs-md-1">

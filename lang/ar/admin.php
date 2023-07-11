@@ -562,5 +562,7 @@ return [
     'countProjects' => 'عدد المشاريع',
     'countBlogs' => 'عدد الأخبار',
     'changeLanguage' => 'تغير اللغه',
+    'showReportsMenu' => 'اظهار التقارير السنويه في المنيو',
+    'showProjectMenu' => 'إطهار المشاريع في المنيو',
 
 ];
