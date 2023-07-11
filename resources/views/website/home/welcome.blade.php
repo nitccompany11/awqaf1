@@ -68,6 +68,7 @@
     </section>
     <!-- End CEO's Message -->
 
+    @if(getSetting()->showProjectMenu == 1)
     <!-- Start Our Work -->
     <section class="ourWork py-5">
         <div class="container">
@@ -109,6 +110,7 @@
         </div>
     </section>
     <!-- End Our Work -->
+    @endif
 
     <!-- Start Latest items -->
     <section class="latestNews py-5">

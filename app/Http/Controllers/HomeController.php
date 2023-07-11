@@ -214,6 +214,12 @@ class HomeController extends Controller
 
     public function projects()
     {
+        if (getSetting()->showProjectMenu == 0) {
+            
+            return back();
+
+        }
+
         $this->data['title'] = trans('admin.projects');
 
         $this->data['projects'] = Projects::where('status', 1)->orderBy('id', 'desc')->get();
@@ -225,6 +231,12 @@ class HomeController extends Controller
 
     public function project($id)
     {
+        if (getSetting()->showProjectMenu == 0) {
+            
+            return back();
+
+        }
+
         $this->data['project'] = Projects::where('status', 1)->findOrFail($id);
 
         $this->data['title'] = $this->data['project']['name_' . getLang()];
@@ -280,6 +292,12 @@ class HomeController extends Controller
 
     public function reports()
     {
+        if (getSetting()->showReportsMenu == 0) {
+            
+            return back();
+
+        }
+        
         $this->data['title'] = trans('admin.reports');
 
         $this->data['reports'] = Reports::where('status', 1)->orderBy('id', 'desc')->get();
