@@ -26,7 +26,7 @@
 
     @include('website.layouts.crumb')
 
-    <section class="latestNews py-5">
+    <section class="latestNews py-5 blogSection">
         <div class="container">
             <div class="d-flex justify-content-between align-items-center">
                 <div class="title-group">

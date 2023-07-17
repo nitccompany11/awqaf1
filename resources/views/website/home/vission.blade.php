@@ -4,7 +4,7 @@
 
     @include('website.layouts.crumb')
 
-	<section class="visionMissionObjectives">
+	<section class="visionMissionObjectives visionClass">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-lg-4 mb-5">
