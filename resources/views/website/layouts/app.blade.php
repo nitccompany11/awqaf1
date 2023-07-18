@@ -206,26 +206,34 @@
                         {{ \Illuminate\Support\Str::limit(getSetting()['site_description_' . getLang()], 150, $end='...') }}
                     </p>
                     <ul class="social">
+                        @if(isset(getSetting()->facebook) && !is_null(getSetting()->facebook))
                         <a href="{{ getSetting()->facebook }}">
                             <li>
                                 <i class="fa-brands fa-facebook"></i>
                             </li>
                         </a>
+                        @endif
+                        @if(isset(getSetting()->instagram) && !is_null(getSetting()->instagram))
                         <a href="{{ getSetting()->instagram }}">
                             <li>
                                 <i class="fa-brands fa-instagram"></i>
                             </li>
                         </a>
+                        @endif
+                        @if(isset(getSetting()->linkedin) && !is_null(getSetting()->linkedin))
                         <a href="{{ getSetting()->linkedin }}">
                             <li>
                                 <i class="fa-brands fa-linkedin"></i>
                             </li>
                         </a>
+                        @endif
+                        @if(isset(getSetting()->youtube) && !is_null(getSetting()->youtube))
                         <a href="{{ getSetting()->youtube }}">
                             <li>
                                 <i class="fa-brands fa-youtube"></i>
                             </li>
                         </a>
+                        @endif
                         @if(isset(getSetting()->twitter) && !is_null(getSetting()->twitter))
                         <a href="{{ getSetting()->twitter }}">
                             <li>
