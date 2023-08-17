@@ -43,6 +43,14 @@
     <meta content="@if(isset($keyword)) {{ $keyword }} @else {{ getSetting()['site_keyword_' . getLang()] }} @endif" name="keywords">
     <meta content="WaitEG" name="author">
 
+    <meta property="og:locale" content="ar_AR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="@if(isset($title)) {{ $title }} @else {{ getSetting()['site_name_' . getLang()] }} @endif" />
+    <meta property="og:description" content="{{ getSetting()['site_description_' . getLang()] }}" />
+    <meta property="og:url" content="{{ url('/') }}" />
+    <meta property="og:site_name" content="{{ getSetting()['site_name_' . getLang()] }}" />
+    <meta property="og:image" content="{{ getImage('settings', getSetting()->site_logo) }}" />
+
     @yield('style')
 
 </head>

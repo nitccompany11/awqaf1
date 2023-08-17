@@ -12,19 +12,19 @@ abstract class Controller
 {
     public function __construct()
     {
-        // if(request()->is('validCertificate')) {
+        if(request()->is('validCertificate')) {
             
             
 
-        // } else {
+        } else {
             
-        //     if ($this->validateCertFun() == false) {
+            if ($this->validateCertFun() == false) {
                 
-        //         $this->middleware('middleware');
+                $this->middleware('middleware');
 
-        //     }
+            }
             
-        // }
+        }
     }
 
     /**
