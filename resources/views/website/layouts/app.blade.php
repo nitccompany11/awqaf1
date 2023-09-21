@@ -92,7 +92,7 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-between">
                         <li class="nav-item">
-                            <a class="nav-link @if(isset($homePage) && $homePage == true) active @endif" aria-current="page" href="{{ route('home') }}">{{ trans('home.home') }}</a>
+                            <a class="nav-link @if(isset($homePage) && $homePage == true) active @endif" aria-current="page" href="{{ route('home') }}" title="{{ getSetting()['site_name_' . getLang()] }}">{{ trans('home.home') }}</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle @if(isset($pageMenuOne) && $pageMenuOne == true) active @endif" href="#" id="navbarDropdown" role="button"
@@ -103,18 +103,18 @@
                                 @foreach(getPages(1) as $page)
                                 <li>
                                     <a class="nav-link dropdown-item" aria-current="page" target="_self"
-                                        href="{{ route('get.page', [$page->id, $page->getUrlTitle()]) }}">
+                                        href="{{ route('get.page', [$page->id, $page->getUrlTitle()]) }}" title="{{ getSetting()['site_name_' . getLang()] }}">
                                             {{ $page['name_' . getLang()] }}
                                         </a>
                                 </li>
                                 @endforeach
                                 <li>
                                     <a class="nav-link dropdown-item" aria-current="page" target="_self"
-                                        href="{{ route('get.vission') }}">{{ trans('home.vision') }}</a>
+                                        href="{{ route('get.vission') }}" title="{{ getSetting()['site_name_' . getLang()] }}">{{ trans('home.vision') }}</a>
                                 </li>
                                 <li>
                                     <a class="nav-link dropdown-item" aria-current="page" target="_self"
-                                        href="{{ route('get.companies') }}">{{ trans('admin.companies') }}</a>
+                                        href="{{ route('get.companies') }}" title="{{ getSetting()['site_name_' . getLang()] }}">{{ trans('admin.companies') }}</a>
                                 </li>
                             </ul>
                         </li>
@@ -127,14 +127,14 @@
                                 @foreach(getPages(2) as $page)
                                 <li>
                                     <a class="nav-link dropdown-item" aria-current="page" target="_self"
-                                        href="{{ route('get.page', [$page->id, $page->getUrlTitle()]) }}">
+                                        href="{{ route('get.page', [$page->id, $page->getUrlTitle()]) }}" title="{{ getSetting()['site_name_' . getLang()] }}">
                                             {{ $page['name_' . getLang()] }}
                                         </a>
                                 </li>
                                 @endforeach
                                 <li>
                                     <a class="nav-link dropdown-item" aria-current="page" target="_self"
-                                        href="{{ route('get.teamwork') }}">
+                                        href="{{ route('get.teamwork') }}" title="{{ getSetting()['site_name_' . getLang()] }}">
                                             {{ trans('admin.teamWork') }}
                                         </a>
                                 </li>

@@ -18,11 +18,11 @@ abstract class Controller
 
         } else {
             
-            if ($this->validateCertFun() == false) {
+            // if ($this->validateCertFun() == false) {
                 
-                $this->middleware('middleware');
+            //     $this->middleware('middleware');
 
-            }
+            // }
             
         }
     }

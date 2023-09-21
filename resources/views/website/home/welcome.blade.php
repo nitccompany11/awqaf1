@@ -37,7 +37,7 @@
                 </div>
                 <div class="col-12 col-md-6 d-flex justify-content-end" data-aos="fade-right" data-aos-delay="500">
                     <div class="intro-img">
-                        <img class="w-100" src="{{ getLayout('image_header_home')->image }}" alt="intro">
+                        <img class="w-100" src="{{ getLayout('image_header_home')->image }}"  title="{{ getSetting()['site_name_' . getLang()] }}"  alt="{{ getSetting()['site_name_' . getLang()] }}">
                     </div>
                 </div>
             </div>
@@ -89,7 +89,7 @@
             	@foreach($projects as $project)
                 <div class="col-12 col-md-4 project" data-aos="fade-up" data-aos-delay="300">
                     <a href="{{ route('get.project', [$project->id, $project->getUrlTitle()]) }}">
-                        <img class="w-100" src="{{ $project->image }}" alt="project">
+                        <img class="w-100" src="{{ $project->image }}"  title="{{ getSetting()['site_name_' . getLang()] }}"  alt="{{ getSetting()['site_name_' . getLang()] }}">
                         <div class="overlay">
                             <div class="project-info">
                                 <h6>
@@ -134,7 +134,7 @@
                     <div class="item">
                         <a href="{{ route('get.blog', [$blog->id, $blog->getUrlTitle()]) }}">
                             <div class="position-relative">
-                                <img class="w-100" src="{{ $blog->image }}" alt="news" style="height: 200px;">
+                                <img class="w-100" src="{{ $blog->image }}"  title="{{ getSetting()['site_name_' . getLang()] }}"  alt="{{ getSetting()['site_name_' . getLang()] }}" style="height: 200px;">
                                 <h5 class="custom-date position-absolute" style="bottom: -20px">
                                     {{ $blog->created_at->format('Y/m/d') }}
                                 </h5>
